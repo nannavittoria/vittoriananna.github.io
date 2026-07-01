@@ -7,7 +7,7 @@ categories = ["tutorials"]
 description = "A step-by-step guide to installing and running Anthropic's Claude Science AI workbench inside WSL2 on Windows"
 +++
 
-Anthropic just launched **Claude Science**, an AI workbench built for scientific research: literature review, code execution, reproducible figures. It's officially supported on macOS and Linux. If you're on Windows, that means going through WSL2. Here's exactly how I set it up.
+Anthropic just launched [**Claude Science**](https://www.anthropic.com/news/claude-science-ai-workbench), an AI workbench built for scientific research: literature review, code execution, reproducible figures. It's officially supported on macOS and Linux. If you're on Windows, that means going through WSL2. Here's exactly how I set it up.
 
 ## What you'll need
 
