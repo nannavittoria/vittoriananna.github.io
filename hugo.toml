@@ -1,4 +1,4 @@
-baseURL = "https://nannavittoria.github.io/vittoriananna.github.io/"
+baseURL = "https://vittoriananna.github.io/"
 languageCode = "en-uk"
 title = "How to Use Claude Science on WSL"
 theme = "PaperMod"
