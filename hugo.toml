@@ -1,0 +1,4 @@
+baseURL = "https://vittoriananna.github.io/"
+languageCode = "en-uk"
+title = "How to Use Claude Science (Beta) on WSL"
+theme = "PaperMod"
