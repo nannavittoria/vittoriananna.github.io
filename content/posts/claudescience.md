@@ -1,6 +1,6 @@
 +++
 date = '2026-07-01T09:47:44+02:00'
-draft = true
+draft = false
 title = "Running Claude Science on Windows via WSL"
 tags = ["claude-science", "wsl", "hpc", "computational-biology", "ai-tools"]
 categories = ["tutorials"]
