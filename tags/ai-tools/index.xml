@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Ai-Tools on How to Use Claude Science on WSL</title>
-    <link>https://nannavittoria.github.io/vittoriananna.github.io/tags/ai-tools/</link>
+    <link>/tags/ai-tools/</link>
     <description>Recent content in Ai-Tools on How to Use Claude Science on WSL</description>
     <generator>Hugo</generator>
     <language>en-uk</language>
     <lastBuildDate>Wed, 01 Jul 2026 09:47:44 +0200</lastBuildDate>
-    <atom:link href="https://nannavittoria.github.io/vittoriananna.github.io/tags/ai-tools/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/ai-tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Running Claude Science on Windows via WSL</title>
-      <link>https://nannavittoria.github.io/vittoriananna.github.io/posts/claudescience/</link>
+      <link>/posts/claudescience/</link>
       <pubDate>Wed, 01 Jul 2026 09:47:44 +0200</pubDate>
-      <guid>https://nannavittoria.github.io/vittoriananna.github.io/posts/claudescience/</guid>
+      <guid>/posts/claudescience/</guid>
       <description>A step-by-step guide to installing and running Anthropic&amp;#39;s Claude Science AI workbench inside WSL2 on Windows</description>
     </item>
   </channel>
