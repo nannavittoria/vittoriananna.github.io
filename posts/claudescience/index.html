@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><script src="/vittoriananna.github.io/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=vittoriananna.github.io/livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Running Claude Science on Windows via WSL | How to Use Claude Science on WSL</title>
 <meta name="keywords" content="claude-science, wsl, hpc, computational-biology, ai-tools">
 <meta name="description" content="A step-by-step guide to installing and running Anthropic&#39;s Claude Science AI workbench inside WSL2 on Windows">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/vittoriananna.github.io/posts/claudescience/">
-<link crossorigin="anonymous" href="/vittoriananna.github.io/assets/css/stylesheet.89ca4972ab5e6aaa05e9a0dae0c4bb64b26585bc79e36f5cf33614eea0283abe.css" integrity="sha256-icpJcqteaqoF6aDa4MS7ZLJlhbx5429c8zYU7qAoOr4=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/vittoriananna.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/vittoriananna.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/vittoriananna.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/vittoriananna.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/vittoriananna.github.io/safari-pinned-tab.svg">
+<link rel="canonical" href="https://nannavittoria.github.io/vittoriananna.github.io/posts/claudescience/">
+<link crossorigin="anonymous" href="/vittoriananna.github.io/assets/css/stylesheet.cd9298b33628769aa1bc1acebbbfd7aa11ce81dfe03484d479e1907760249a1d.css" integrity="sha256-zZKYszYodpqhvBrOu7/XqhHOgd/gNITUeeGQd2Akmh0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://nannavittoria.github.io/vittoriananna.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://nannavittoria.github.io/vittoriananna.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://nannavittoria.github.io/vittoriananna.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://nannavittoria.github.io/vittoriananna.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://nannavittoria.github.io/vittoriananna.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/vittoriananna.github.io/posts/claudescience/">
+<link rel="alternate" hreflang="en" href="https://nannavittoria.github.io/vittoriananna.github.io/posts/claudescience/">
 <noscript>
     <style>
         #theme-toggle,
@@ -64,13 +64,81 @@
         document.querySelector("html").dataset.theme = 'light';
     }
 
+</script><meta property="og:url" content="https://nannavittoria.github.io/vittoriananna.github.io/posts/claudescience/">
+  <meta property="og:site_name" content="How to Use Claude Science on WSL">
+  <meta property="og:title" content="Running Claude Science on Windows via WSL">
+  <meta property="og:description" content="A step-by-step guide to installing and running Anthropic&#39;s Claude Science AI workbench inside WSL2 on Windows">
+  <meta property="og:locale" content="en_uk">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-07-01T09:47:44+02:00">
+    <meta property="article:modified_time" content="2026-07-01T09:47:44+02:00">
+    <meta property="article:tag" content="Claude-Science">
+    <meta property="article:tag" content="Wsl">
+    <meta property="article:tag" content="Hpc">
+    <meta property="article:tag" content="Computational-Biology">
+    <meta property="article:tag" content="Ai-Tools">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Running Claude Science on Windows via WSL">
+  <meta name="twitter:description" content="A step-by-step guide to installing and running Anthropic&#39;s Claude Science AI workbench inside WSL2 on Windows">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://nannavittoria.github.io/vittoriananna.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Running Claude Science on Windows via WSL",
+      "item": "https://nannavittoria.github.io/vittoriananna.github.io/posts/claudescience/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Running Claude Science on Windows via WSL",
+  "name": "Running Claude Science on Windows via WSL",
+  "description": "A step-by-step guide to installing and running Anthropic's Claude Science AI workbench inside WSL2 on Windows",
+  "keywords": [
+    "claude-science", "wsl", "hpc", "computational-biology", "ai-tools"
+  ],
+  "articleBody": "Anthropic just launched Claude Science, an AI workbench built for scientific research: literature review, code execution, reproducible figures. It’s officially supported on macOS and Linux. If you’re on Windows, that means going through WSL2. Here’s exactly how I set it up.\nWhat you’ll need Windows 10 (2004+) or Windows 11, with virtualization enabled in BIOS WSL2, not WSL1 — the sandbox Claude Science runs code in depends on it Ubuntu 24.04 or newer inside WSL — Ubuntu 22.04 ships an older version of bubblewrap than the sandbox requires A Claude Pro, Max, Team, or Enterprise plan (Team/Enterprise users need an admin to enable it first) 1. Install WSL2 with Ubuntu 24.04 If you don’t already have WSL set up, open PowerShell and run:\nwsl --install -d Ubuntu-24.04 Reboot if Windows asks you to, then open Ubuntu 24.04 from the Start Menu and create your Linux user.\nAlready have a WSL distro? Check its version and make sure it’s WSL2:\nwsl -l -v If it shows 1 under VERSION, upgrade it:\nwsl --set-version Ubuntu-24.04 2 You can confirm you’re on WSL2 from inside the Linux shell too — the kernel string will contain -WSL2:\nuname -r # 5.15.146.1-microsoft-standard-WSL2 2. Install the prerequisites Inside your Ubuntu terminal:\nsudo apt update \u0026\u0026 sudo apt install -y curl bubblewrap socat Worth double-checking bubblewrap meets the minimum version (0.8.0+) before moving on:\nbwrap --version 3. Install Claude Science Run the installer from inside Ubuntu, not by downloading a binary through a Windows browser and copying it across — the installer verifies the checksum and keeps you on the stable release channel:\ncurl -fsSL https://claude.ai/install-claude-science.sh | bash 4. Fix the PATH (if needed) If the installer finishes with a warning that ~/.local/bin isn’t on your PATH, add it to your shell profile:\necho 'export PATH=\"$HOME/.local/bin:$PATH\"' \u003e\u003e ~/.bashrc source ~/.bashrc Then confirm it’s working:\nclaude-science --version 5. Launch it claude-science serve --port 8765 --no-browser This prints a local URL you can open in your browser to start a session. If you’d rather it keep running in the background of your current WSL session:\nclaude-science serve --port 8765 --no-browser --detached Enjoy!\n",
+  "wordCount" : "353",
+  "inLanguage": "en",
+  "datePublished": "2026-07-01T09:47:44+02:00",
+  "dateModified": "2026-07-01T09:47:44+02:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://nannavittoria.github.io/vittoriananna.github.io/posts/claudescience/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "How to Use Claude Science on WSL",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nannavittoria.github.io/vittoriananna.github.io/favicon.ico"
+    }
+  }
+}
 </script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="header-nav">
         <div class="logo">
-            <a href="http://localhost:1313/vittoriananna.github.io/" accesskey="h" title="How to Use Claude Science on WSL (Alt + H)">How to Use Claude Science on WSL</a>
+            <a href="https://nannavittoria.github.io/vittoriananna.github.io/" accesskey="h" title="How to Use Claude Science on WSL (Alt + H)">How to Use Claude Science on WSL</a>
             <div class="logo-switches">
                 <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
@@ -105,19 +173,13 @@
     
     <h1 class="post-title entry-hint-parent">
       Running Claude Science on Windows via WSL
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
     </h1>
     <div class="post-description">
       A step-by-step guide to installing and running Anthropic&#39;s Claude Science AI workbench inside WSL2 on Windows
     </div>
     <div class="post-meta">
 
-<span title='2026-07-01 09:47:44 +0200 CEST'>July 1, 2026</span>&nbsp;·&nbsp;<span>2 min</span>
+<span title='2026-07-01 09:47:44 +0200 +0200'>July 1, 2026</span>&nbsp;·&nbsp;<span>2 min</span>
 
 </div>
   </header> 
@@ -165,11 +227,11 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/vittoriananna.github.io/tags/claude-science/">Claude-Science</a></li>
-      <li><a href="http://localhost:1313/vittoriananna.github.io/tags/wsl/">Wsl</a></li>
-      <li><a href="http://localhost:1313/vittoriananna.github.io/tags/hpc/">Hpc</a></li>
-      <li><a href="http://localhost:1313/vittoriananna.github.io/tags/computational-biology/">Computational-Biology</a></li>
-      <li><a href="http://localhost:1313/vittoriananna.github.io/tags/ai-tools/">Ai-Tools</a></li>
+      <li><a href="https://nannavittoria.github.io/vittoriananna.github.io/tags/claude-science/">Claude-Science</a></li>
+      <li><a href="https://nannavittoria.github.io/vittoriananna.github.io/tags/wsl/">Wsl</a></li>
+      <li><a href="https://nannavittoria.github.io/vittoriananna.github.io/tags/hpc/">Hpc</a></li>
+      <li><a href="https://nannavittoria.github.io/vittoriananna.github.io/tags/computational-biology/">Computational-Biology</a></li>
+      <li><a href="https://nannavittoria.github.io/vittoriananna.github.io/tags/ai-tools/">Ai-Tools</a></li>
     </ul>
 
   </footer>
@@ -177,7 +239,7 @@
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/vittoriananna.github.io/">How to Use Claude Science on WSL</a></span> · 
+        <span>&copy; 2026 <a href="https://nannavittoria.github.io/vittoriananna.github.io/">How to Use Claude Science on WSL</a></span> · 
 
     
     

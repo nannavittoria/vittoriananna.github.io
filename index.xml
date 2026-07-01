@@ -6,6 +6,14 @@
     <description>Recent content on How to Use Claude Science on WSL</description>
     <generator>Hugo</generator>
     <language>en-uk</language>
+    <lastBuildDate>Wed, 01 Jul 2026 09:47:44 +0200</lastBuildDate>
     <atom:link href="https://nannavittoria.github.io/vittoriananna.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Running Claude Science on Windows via WSL</title>
+      <link>https://nannavittoria.github.io/vittoriananna.github.io/posts/claudescience/</link>
+      <pubDate>Wed, 01 Jul 2026 09:47:44 +0200</pubDate>
+      <guid>https://nannavittoria.github.io/vittoriananna.github.io/posts/claudescience/</guid>
+      <description>A step-by-step guide to installing and running Anthropic&amp;#39;s Claude Science AI workbench inside WSL2 on Windows</description>
+    </item>
   </channel>
 </rss>
